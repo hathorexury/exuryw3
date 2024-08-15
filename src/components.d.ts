@@ -7,17 +7,15 @@ export {}
 
 declare module 'vue' {
   export interface GlobalComponents {
+    AvatarMenu: typeof import('./components/AvatarMenu.vue')['default']
     Coin: typeof import('./components/coin/Coin.vue')['default']
     CoinGroupModel: typeof import('./components/coin/CoinGroupModel.vue')['default']
     CoinModel: typeof import('./components/coin/CoinModel.vue')['default']
     CoinScene: typeof import('./components/coin/CoinScene.vue')['default']
-    HelloWorld: typeof import('./components/HelloWorld.vue')['default']
     OnBoardingCard: typeof import('./components/cards/OnBoardingCard.vue')['default']
     OnBoardingCardGroup: typeof import('./components/cards/OnBoardingCardGroup.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     SideBar: typeof import('./components/SideBar.vue')['default']
-    TheWelcome: typeof import('./components/TheWelcome.vue')['default']
-    WelcomeItem: typeof import('./components/WelcomeItem.vue')['default']
   }
 }
