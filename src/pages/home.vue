@@ -11,8 +11,8 @@ const isAnimationV2 = ref(false);
       <div class="title-wrapper">
         <p class="title-top">
           Gana más<br />
-          Arriesga Menos.
-          <span class="title-accent">Descube el 1º Exchange sin custodia</span>
+          Arriesga Menos.<br />
+          <span class="title-accent">Descube el 1º Exchange sin custodia</span><br />
         </p>
         <div class="paragraph-wrapper">
           <p>
@@ -99,21 +99,21 @@ const isAnimationV2 = ref(false);
     flex-direction: column;
     margin: 0;
     line-height: 1em;
-    font-size: 0.5em;
+    font-size: 0.9em;
     width: 90%;
   }
   .title-accent {
     font-weight: 800;
     color: #f2f2f2;
     line-height: 1em;
-    font-size: 0.8em;
+    font-size: 1em;
   }
 }
 .paragraph-wrapper {
   width: 70%;
   align-self: stretch;
   position: relative;
-  font-size: 20px;
+  font-size: 22px;
   letter-spacing: 0.5px;
   z-index: 2;
 }
