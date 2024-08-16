@@ -244,25 +244,13 @@ const isAnimationV2 = ref(false);
     line-height: normal;
     position: relative;
     letter-spacing: 0.5px;
-    margin-top: 155px;
+    margin-top: 20px;
     z-index: 1;
     width: 100%;
     display: flex;
     gap: 8px;
 
-    .title-top {
-      width: 100%;
-      line-height: normal;
-      font-size: 40px;
-      align-self: stretch;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      letter-spacing: 0.2px;
-      justify-content: flex-start;
-      gap: 8px;
-      margin-top: 20px;
-  }
+    .title-top,
 
     .title-accent {
       display: inline-block;
@@ -316,14 +304,7 @@ const isAnimationV2 = ref(false);
   }
 }
 @media (max-width: $screen-xs) {
-  .title-top {
-    align-self: stretch;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: 8px;
-  }
+  .title-top,
   .title-middle {
     font-size: 38px;
     display: inline-block;
