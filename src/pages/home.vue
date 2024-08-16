@@ -254,12 +254,12 @@ const isAnimationV2 = ref(false);
       margin: 0;
       line-height: 4rem;
       display: inline-block;
-      font-size: 40px;
+      font-size: 35px;
     }
 
     .title-accent {
       display: inline-block;
-      font-size: 48px;
+      font-size: 40px;
     }
   }
   .paragraph-wrapper {
@@ -309,10 +309,14 @@ const isAnimationV2 = ref(false);
   }
 }
 @media (max-width: $screen-xs) {
-  .title-top,
+  .title-top{
+    font-size: 22px;
+    display: inline-block;
+    height: fit-content;
+  }
   .title-middle {
     font-size: 35px;
-    display: block;
+    display: inline-block;
     height: fit-content;
   }
 
