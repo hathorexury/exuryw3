@@ -99,20 +99,21 @@ const isAnimationV2 = ref(false);
     flex-direction: column;
     margin: 0;
     line-height: 1em;
-    font-size: 1em;
+    font-size: 0.5em;
     width: 90%;
   }
   .title-accent {
     font-weight: 800;
     color: #f2f2f2;
     line-height: 1em;
+    font-size: 0.8em;
   }
 }
 .paragraph-wrapper {
   width: 70%;
   align-self: stretch;
   position: relative;
-  font-size: 24px;
+  font-size: 20px;
   letter-spacing: 0.5px;
   z-index: 2;
 }
@@ -236,7 +237,7 @@ const isAnimationV2 = ref(false);
     left: -150px;
   }
   .title-wrapper {
-    font-size: 48px;
+    font-size: 35px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -253,7 +254,7 @@ const isAnimationV2 = ref(false);
       margin: 0;
       line-height: 4rem;
       display: inline-block;
-      font-size: 48px;
+      font-size: 40px;
     }
 
     .title-accent {
@@ -262,7 +263,7 @@ const isAnimationV2 = ref(false);
     }
   }
   .paragraph-wrapper {
-    font-size: 16px;
+    font-size: 14px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -310,13 +311,13 @@ const isAnimationV2 = ref(false);
 @media (max-width: $screen-xs) {
   .title-top,
   .title-middle {
-    font-size: 48px;
+    font-size: 35px;
     display: block;
     height: fit-content;
   }
 
   .title-accent {
-    font-size: 48px;
+    font-size: 40px;
     display: inline-block;
   }
 }
