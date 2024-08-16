@@ -244,13 +244,17 @@ const isAnimationV2 = ref(false);
     line-height: normal;
     position: relative;
     letter-spacing: 0.5px;
-    padding-top: 333px;
+    padding-top: 555px;
     z-index: 1;
     width: 100%;
     display: flex;
     gap: 8px;
 
-    .title-top,
+    .title-top{
+      display: inline-block;
+      font-size: 40px;
+      margin-top: -100px; /* Ajuste adicional para bajar el título */
+    }
 
     .title-accent {
       display: inline-block;
