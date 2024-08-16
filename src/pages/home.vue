@@ -10,14 +10,13 @@ const isAnimationV2 = ref(false);
       </div>
       <div class="title-wrapper">
         <p class="title-top">
-          Lorem ipsum<br />
-          dolor
-          <span class="title-accent">sit amet</span>
+          Gana más<br />
+          Arriesga Menos.
+          <span class="title-accent">Descube el 1º Exchange sin custodia</span>
         </p>
         <div class="paragraph-wrapper">
           <p>
-            Lorem ipsum dolor sit amet consectetur. Ullamcorper malesuada vel
-            platea vehicula libero.
+            En Exury el único sonido que escucharás es el de tu inversión creciendo. Cambia hoy tus euros a stable coins y experimienta la tranquilidad de saber que tu dinero esta bajo tu control.
           </p>
         </div>
       </div>
