@@ -252,10 +252,15 @@ const isAnimationV2 = ref(false);
 
     .title-top {
       width: 100%;
-      margin: 0;
-      line-height: 4rem;
-      display: inline-block;
+      line-height: normal;
       font-size: 40px;
+      align-self: stretch;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      letter-spacing: 0.2px;
+      justify-content: flex-start;
+      gap: 8px;
   }
 
     .title-accent {
