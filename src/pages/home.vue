@@ -309,15 +309,19 @@ const isAnimationV2 = ref(false);
   }
 }
 @media (max-width: $screen-xs) {
-  .title-top,
+  .title-top {
+    font-size: 38px;
+    display: inline-block;
+    height: fit-content;
+  }
   .title-middle {
-    font-size: 35px;
+    font-size: 38px;
     display: inline-block;
     height: fit-content;
   }
 
   .title-accent {
-    font-size: 40px;
+    font-size: 38px;
     display: inline-block;
   }
 }
