@@ -99,13 +99,13 @@ const isAnimationV2 = ref(false);
     flex-direction: column;
     margin: 0;
     line-height: 1em;
-    font-size: 0.9em;
+    font-size: 0.8em;
     width: 90%;
   }
   .title-accent {
     font-weight: 800;
     color: #f2f2f2;
-    line-height: 1em;
+    line-height: 0.9em;
     font-size: 1em;
   }
 }
