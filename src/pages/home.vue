@@ -17,7 +17,7 @@ const isAnimationV2 = ref(false);
         </p>
         <div class="paragraph-wrapper">
           <p>
-            En Exury el único sonido que escucharás es el de tu inversión creciendo. Cambia hoy tus euros a stable coins y experimienta la tranquilidad de saber que tu dinero esta bajo tu control.
+            En Exury el único sonido que escucharás es el de tu inversión creciendo. Cambia hoy tus Euros a Stablecoins y experimienta la tranquilidad de saber que tu dinero esta bajo tu control.
           </p>
         </div>
       </div>
@@ -244,7 +244,7 @@ const isAnimationV2 = ref(false);
     line-height: normal;
     position: relative;
     letter-spacing: 0.5px;
-    margin-top: 120px;
+    margin-top: 222px;
     z-index: 1;
     width: 100%;
     display: flex;
@@ -279,7 +279,7 @@ const isAnimationV2 = ref(false);
     text-align: center;
     font-size: 14px;
     color: #1cba75;
-    margin-bottom: 113px;
+    margin-bottom: 100px;
   }
   .btn-how-it-works,
   .btn-buy-crypto {
