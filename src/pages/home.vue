@@ -244,7 +244,7 @@ const isAnimationV2 = ref(false);
     line-height: normal;
     position: relative;
     letter-spacing: 0.5px;
-    margin-top: 20px;
+    margin-top: 120px;
     z-index: 1;
     width: 100%;
     display: flex;
