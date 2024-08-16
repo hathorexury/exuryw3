@@ -261,6 +261,7 @@ const isAnimationV2 = ref(false);
       letter-spacing: 0.2px;
       justify-content: flex-start;
       gap: 8px;
+      margin-top: 20px;
   }
 
     .title-accent {
