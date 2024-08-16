@@ -10,6 +10,7 @@ const isAnimationV2 = ref(false);
       </div>
       <div class="title-wrapper">
         <p class="title-top">
+          <br />
           Gana más<br />
           Arriesga Menos.<br />
           <span class="title-accent">Descube el 1º Exchange sin custodia</span><br />
