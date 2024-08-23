@@ -1,19 +1,14 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-    <script type="module">
-      import { Buffer } from "buffer";
-      import process from "process";
-      window.Buffer = Buffer;
-      window.process = process;
-    </script>
-    <meta charset="UTF-8">
-    <link rel="icon" href="/favicon.ico">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exury App</title>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test</title>
   </head>
-  <body>
-    <div id="app"></div>
+
+  <body class="h-screen overflow-hidden">
+    <div id="app" class="fill-width" style="height: fit-content"></div>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
