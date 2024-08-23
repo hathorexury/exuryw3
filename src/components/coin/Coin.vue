@@ -32,7 +32,7 @@ onMounted(() => {
     0.1,
     1000,
   );
-  camera.position.z = 1.5;
+  camera.position.z = 1;
   camera.position.y = 0;
   camera.position.x = 0;
 

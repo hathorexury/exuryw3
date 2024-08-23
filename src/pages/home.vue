@@ -20,13 +20,14 @@
       <div class="content-wrapper">
         <div class="title-wrapper">
           <p class="title-top">
-            Gana más, arriesga menos. <span class="title-accent">¡Descubre el 1er
-            exchange sin custodia!</span>
+            Gana más, arriesga menos.
           </p>
+          <span class="title-accent">¡Descubre el 1er
+            exchange sin custodia!</span>
         </div>
         <div class="paragraph-wrapper">
-          <p class="loremIpsum">
-            En Exury, el único sonido que escucharás es el de tu inversión creciendo. Cambia hoy euros por stablecoins y siente la libertad de tener el control sobre dónde almacenarlos.
+          <p>
+            Cambia hoy euros por stablecoins y siente la libertad de tener el control sobre dónde almacenarlos.
           </p>
         </div>
         <div class="buttons-wrapper">
@@ -34,15 +35,15 @@
           <v-btn rounded color="primary" class="btn-buy-crypto text-capitalize">Buy Crypto</v-btn>
         </div>
       </div>
+      <div class="sponsorship-wrapper">
+        <img
+          class="sponsor-left"
+          alt=""
+          src="/EN_Funded_by_European_Union_vert_RGB_NEG.png"
+        />
+        <img class="sponsor-right" alt="" src="/banco-de-espana-white.png" />
+      </div>
     </div>
-  </div>
-  <div class="sponsorship-wrapper">
-    <img
-      class="sponsor-left"
-      alt=""
-      src="/EN_Funded_by_European_Union_vert_RGB_NEG.png"
-    />
-    <img class="sponsor-right" alt="" src="/banco-de-espana-white.png" />
   </div>
 </template>
 
@@ -50,37 +51,31 @@
 @import "@/styles/variables.scss";
 .home-wrapper {
   margin: 0 !important;
-  min-height: 100%;
-  max-height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: start;
-  padding: 0 0 24px;
+  height: fit-content;
   box-sizing: border-box;
   gap: 32px;
   z-index: 1;
   font-size: 64px;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
   .main-content {
+    position: relative;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
-    position: absolute;
-    top: -56px;
     width: 100%;
-    min-height: calc(100% + 56px);
-    gap: 8px;
+    min-height: fit-content;
     .content-wrapper {
       width: 100%;
       max-height: fit-content;
-      position: relative;
       display: flex;
       flex-direction: column;
-      align-items: flex-start;
-      justify-content: center;
+      align-items: start;
       .title-wrapper {
+        margin-top: 108px;
         position: relative;
         letter-spacing: 0.5px;
         display: flex;
@@ -105,7 +100,6 @@
       }
       .paragraph-wrapper {
         width: 70%;
-        align-self: stretch;
         position: relative;
         font-size: 24px;
         line-height: 1.2em;
@@ -126,6 +120,32 @@
         color: #1cba75;
       }
     }
+    .sponsorship-wrapper {
+      margin-top: 95px;
+      position: relative;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 32px;
+      z-index: 2;
+      text-align: center;
+      color: #fff;
+      .sponsor-left {
+        width: 124px;
+        position: relative;
+        height: 104px;
+        object-fit: cover;
+        filter: brightness(1000%);
+      }
+      .sponsor-right {
+        width: 220px;
+        position: relative;
+        height: 48.6px;
+        object-fit: cover;
+      }
+    }
   }
 
 }
@@ -139,35 +159,8 @@
   height: 623px;
   object-fit: cover;
   z-index: 0;
-  background:red;
 }
-.sponsorship-wrapper {
-  margin: 0 !important;
-  position: absolute;
-  width: 100%;
-  bottom: 20px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 32px;
-  z-index: 2;
-  text-align: center;
-  color: #fff;
-  .sponsor-left {
-    width: 124px;
-    position: relative;
-    height: 104px;
-    object-fit: cover;
-    filter: brightness(1000%);
-  }
-  .sponsor-right {
-    width: 220px;
-    position: relative;
-    height: 48.6px;
-    object-fit: cover;
-  }
-}
+
 .frameParent {
   align-self: stretch;
   width: 1025px;
@@ -204,100 +197,178 @@
   display: flex;
   align-items: center;
 }
-@media (max-width: $screen-md) {
+//@media (max-width: $screen-md) {
+//  .home-wrapper {
+//    margin: 0 !important;
+//    min-height: 90%;
+//    max-height: 80%;
+//    box-sizing: border-box;
+//    gap: 32px;
+//    z-index: 1;
+//    font-size: 64px;
+//    position: relative;
+//    overflow-x: hidden;
+//    display: flex;
+//    flex-direction: column;
+//    justify-content: start;
+//    overflow-y: auto;
+//  }
+//  .main-content {
+//    align-self: stretch;
+//    display: flex;
+//    flex-direction: column;
+//    align-items: flex-start;
+//    justify-content: flex-start;
+//    position: relative;
+//    gap: 8px;
+//    margin-bottom: 32px;
+//    padding: 0 16px;
+//  }
+//  .coins-wrapper {
+//    position: absolute;
+//    top: -640px;
+//    left: -150px;
+//  }
+//  .title-wrapper {
+//    position: relative;
+//    letter-spacing: 0.5px;
+//    z-index: 1;
+//    display: block;
+//
+//    .title-top {
+//      width: 100%;
+//      margin: 0;
+//      line-height: 4rem;
+//      display: inline-block;
+//      font-size: 48px;
+//    }
+//
+//    .title-accent {
+//      display: inline-block;
+//      font-size: 48px;
+//    }
+//  }
+//  .paragraph-wrapper {
+//    width: 100%;
+//    align-self: stretch;
+//    position: relative;
+//    font-size: 1rem;
+//    letter-spacing: 0.5px;
+//    z-index: 2;
+//  }
+//  .buttons-wrapper {
+//    width: 100%;
+//    height: fit-content;
+//    display: flex;
+//    flex-direction: column-reverse;
+//    align-items: center;
+//    justify-content: flex-start;
+//    gap: 16px;
+//    text-align: center;
+//    font-size: 14px;
+//    color: #1cba75;
+//    margin-bottom: 113px;
+//    .btn-how-it-works, .btn-buy-crypto {
+//      width: 100%;
+//      height: 50px;
+//    }
+//  }
+//
+//  .sponsorship-wrapper {
+//    left: 16px;
+//    .sponsor-left {
+//      width: 76px;
+//      position: relative;
+//      height: 64px;
+//      object-fit: cover;
+//    }
+//    .sponsor-right {
+//      width: 136px;
+//      position: relative;
+//      height: 30px;
+//      object-fit: cover;
+//    }
+//  }
+//}
+@media (max-width: $screen-sm) {
   .home-wrapper {
-    align-items: flex-end;
-    justify-content: end;
-    font-size: 3.3rem;
-    gap: 0;
-    padding: 0 16px;
-  }
-  .main-content {
-    align-self: stretch;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    position: relative;
-    gap: 8px;
-    margin-bottom: 32px;
-    padding: 0 16px;
-  }
-  .coins-wrapper {
-    position: absolute;
-    top: -640px;
-    left: -150px;
-  }
-  .title-wrapper {
-    position: relative;
-    letter-spacing: 0.5px;
-    z-index: 1;
-    display: block;
-
-    .title-top {
-      width: 100%;
-      margin: 0;
-      line-height: 4rem;
-      display: inline-block;
-      font-size: 48px;
-    }
-
-    .title-accent {
-      display: inline-block;
-      font-size: 48px;
-    }
-  }
-  .paragraph-wrapper {
+    min-height: 100%;
+    height: 100px;
+    max-height: 100px;
     width: 100%;
-    align-self: stretch;
-    position: relative;
-    font-size: 1rem;
-    letter-spacing: 0.5px;
-    z-index: 2;
-  }
-  .buttons-wrapper {
-    width: 100%;
-    height: fit-content;
-    display: flex;
-    flex-direction: column-reverse;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 16px;
-    text-align: center;
-    font-size: 14px;
-    color: #1cba75;
-    margin-bottom: 113px;
-  }
-  .btn-how-it-works, .btn-buy-crypto {
-    width: 100%;
-    height: 50px;
-  }
-  .sponsorship-wrapper {
-    left: 16px;
-    .sponsor-left {
-      width: 76px;
-      position: relative;
-      height: 64px;
-      object-fit: cover;
-    }
-    .sponsor-right {
-      width: 136px;
-      position: relative;
-      height: 30px;
-      object-fit: cover;
-    }
-  }
-}
-@media (max-width: $screen-xs) {
-  .title-top, .title-middle {
-    font-size: 48px;
-    display: block;
-    height: fit-content;
-  }
+    justify-content: start;
+    .main-content {
+      align-items: start;
+      justify-content: start;
+      .coins-wrapper {
+        position: relative;
+        top: -50px;
+        right: 150px;
+      }
+      .content-wrapper {
+        position: relative;
+        top: -40%;
+        .title-wrapper {
+          padding: 0 16px;
+          width: 100%;
 
-  .title-accent {
-    font-size: 48px;
-    display: inline-block;
+          .title-top {
+            width: 75%;
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+          }
+          .title-accent {
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+          }
+        }
+        .paragraph-wrapper {
+          margin-top: 10px;
+          width: 100%;
+          padding: 0 16px;
+          p {
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+          }
+        }
+        .buttons-wrapper{
+          width: 100%;
+          display: flex;
+          flex-direction: column-reverse;
+          padding: 0 16px;
+          .btn-how-it-works, .btn-buy-crypto{
+            width: 100%;
+            padding: 10px 24px;
+          }
+          .btn-how-it-works {
+
+          }
+          .btn-buy-crypto{
+
+          }
+        }
+      }
+      .sponsorship-wrapper {
+        margin-top: 0;
+        position: relative;
+        top: calc(-40% + 50px);
+        display: flex;
+        justify-content: start;
+        padding: 0 0 0 28px;
+        .sponsor-left{
+          width: 80px;
+        }
+        .sponsor-right {
+          width: 150px;
+        }
+      }
+    }
   }
 }
 </style>

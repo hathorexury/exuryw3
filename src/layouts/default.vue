@@ -1,27 +1,27 @@
 <template>
   <v-app>
-    <v-main id="main" class="fill-width overflow-hidden position-relative text-left d-flex justify-center align-center">
+    <v-main class="main fill-width overflow-hidden position-relative text-left d-flex justify-center align-center">
       <div id="mainContainer" class="rounded-circle" />
-      <div id="list">
+      <div class="list">
         <!-- Sidebar with padding -->
         <div id="sidebarWrapper">
           <SideBar />
         </div>
         <!-- Main content area -->
-        <div id="listInner">
-          <div id="top-bar-wrapper">
-            <div id="searchBarWrapper">
-              <div id="searchBar">
+        <div class="listInner">
+          <div class="top-bar-wrapper">
+            <div class="searchBarWrapper">
+              <div class="searchBar">
                 <v-text-field
                   v-model="searchQuery"
-                  label="Search"
+                  label="Buscar"
                   single-line
                   hide-details
                   @input="onSearch"
                   class="custom-search-bar"
                 >
                   <template v-slot:prepend-inner>
-                    <v-icon color="#2A2A2AFF">mdi-magnify</v-icon>
+                    <v-icon color="white">mdi-magnify</v-icon>
                   </template>
                 </v-text-field>
               </div>
@@ -42,10 +42,66 @@
               <AvatarMenu />
             </div>
           </div>
-          <div class="flex fill-width fill-height">
+          <div class="page-view flex fill-width">
             <transition name="scroll-x-transition" mode="out-in">
               <router-view />
             </transition>
+          </div>
+          <div class="footer-wrapper">
+            <hr />
+            <p class="footer-top">La inversión en criptoactivos no está regulada, puede no ser adecuada para inversores minoristas y perderse la totalidad del importe invertido Es importante leer y comprender los riesgos de esta inversión que se explican detalladamente en esta ubicación.</p>
+            <div class="footer-mid">
+              <div>
+                <img
+                  class="logo-footer"
+                  alt=""
+                  src="/LogoExury1.png"
+                />
+                <p>Calle Hermosilla 48, 1. dcha.
+                  Madrid, Spain</p>
+                <p>contact@exury.io</p>
+              </div>
+              <div>
+                <h2>Seguridad & Legal</h2>
+                <ul>
+                  <li>Politica de Privacidad</li>
+                  <li>Terminos y Condiciones</li>
+                  <li>Cookies</li>
+                  <li>Licencias</li>
+                </ul>
+              </div><div>
+                <h2>Tendencias</h2>
+                <ul>
+                  <li>Tendencia 1</li>
+                  <li>Tendencia 2</li>
+                  <li>Tendencia 3</li>
+                  <li>Tendencia 4</li>
+                </ul>
+              </div>
+              <div>
+                <h2>Newsletter</h2>
+                <v-text-field
+                  append-inner-icon="mdi-email-outline"
+                  label="Email"
+                  variant="outlined"
+                ></v-text-field>
+                <v-btn rounded color="primary" class="btn-subscribe text-capitalize">Suscribirse</v-btn>
+              </div>
+            </div>
+            <hr />
+            <div class="footer-bottom">
+              <div class="social-icons">
+                <v-icon icon="mdi-whatsapp"></v-icon>
+                <v-icon icon="mdi-instagram"></v-icon>
+                <v-icon icon="mdi-twitter"></v-icon>
+              </div>
+              <div>
+                <p>A product of </p>
+              </div>
+              <div>
+                <p>© 2024 Exury. All rights reserved</p>
+              </div>
+            </div>
           </div>
         </div>
         <img
@@ -65,7 +121,7 @@
 
 <style lang="scss" scoped>
 @import "@/styles/variables.scss";
-#main {
+.main {
   background-color: #141218;
   font-size: 16px;
   color: #c7d4cf;
@@ -89,7 +145,7 @@
   transform-origin: 0 0;
   mix-blend-mode: normal;
 }
-#list {
+.list {
   backdrop-filter: blur(4px);
   border-radius: 16px;
   background-color: rgba(13, 21, 19, 0.5);
@@ -137,16 +193,84 @@
   align-items: center;
   padding-right: 44px;
 }
-#listInner {
+.listInner {
   position: relative;
   width: 100%;
   max-width: 100%;
   height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
   z-index: 1;
-  overflow: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
+  .page-view {
+    height: fit-content;
+  }
+  .footer-wrapper{
+    width: 100%;
+    height: fit-content;
+    padding: 0 16px 0 0;
+    margin-top: 60px;
+    .footer-top {
+      padding: 14px 16px;
+      background: #e1ece7;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      color: #323836;
+      border-radius: 4px;
+      margin-bottom: 50px;
+      margin-top: 64px;
+    }
+    .footer-mid {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 64px;
+
+      .btn-subscribe {
+        width: 250px;
+      }
+      .logo-footer {
+        margin-bottom: 30px;
+        width: 147px;
+      }
+      input {
+        background: red;
+        width: 200px;
+        height: 40px;
+      }
+      div:nth-child(1){
+        width: 250px;
+        p {
+          margin-bottom: 5px;
+        }
+      }
+      h2 {
+        color: #E6E1E3;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 28px;
+        margin-bottom: 24px;
+      }
+      ul li {
+        color: #E6E1E3;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        opacity: 0.65;
+        list-style: none;
+        margin-bottom: 16px;
+      }
+    }
+    .footer-bottom {
+      padding: 23px 0 0 0;
+      display: flex;
+      justify-content: space-between;
+      .social-icons > * {
+        margin-right: 16px;
+      }
+    }
+  }
 }
 #icon {
   width: 24px;
@@ -281,10 +405,11 @@
   padding: 4px;
   gap: 4px;
 }
-#searchBar {
+.searchBar {
   width: 360px;
   border-radius: 28px;
-  background-color: #f6f6f7;
+  border: none;
+  background-color: #2d3531;
   height: 56px;
   overflow: hidden;
   flex-shrink: 0;
@@ -295,7 +420,8 @@
   min-width: 360px;
   max-width: 720px;
 }
-#searchBarWrapper {
+.searchBarWrapper {
+  border: none;
   flex: 1;
   display: flex;
   flex-direction: row;
@@ -320,7 +446,7 @@
   justify-content: center;
   gap: 16px;
 }
-#top-bar-wrapper {
+.top-bar-wrapper {
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -346,90 +472,43 @@
 }
 
 @media (max-width: $screen-md) {
-  #content {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    #list {
-      display: flex;
-      flex-direction: column-reverse;
-      align-items: center;
-      justify-content: start;
-      padding: 16px 0 0 0;
-      gap: 120px;
-      overflow: hidden;
+  .main {
+    padding: 0;
+    margin: 0;
+    .list {
       position: absolute;
-      top: 48px;
-      left: 16px;
+      display: block;
       width: calc(100% - 32px);
-      height: calc(100% - 64px);
-      #logoExury {
-        width: 103px;
-        position: absolute;
-        margin: 0 !important;
-        top: 28px;
-        left: 100px;
-        height: 35.2px;
-        object-fit: cover;
-        z-index: 1000;
-      }
-      #listInner {
-        height: 100%;
-        min-height: 100%;
-        width: 100%;
-        max-width: 100%;
-        #top-bar-wrapper {
-          z-index: 2;
-          #searchBarWrapper {
-            display: flex;
-            justify-content: flex-end;
-            margin-left: 20px;
-            margin-right: -15px;
-            height: 56px;
-            width: clamp(56px, 10vw, 56px);
-            #searchBar {
+      height: calc(100% - 32px);
+      margin: 0;
+      left: 16px;
+      top: 16px;
+      overflow: hidden;
+      padding: 0;
+      .listInner {
+        .top-bar-wrapper {
+          margin-top: 16px;
+          width: 100%;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: flex-end;
+          padding-right: 16px;
+          .searchBarWrapper {
+            width: 56px;
+            max-width: 56px;
+            .searchBar{
               display: none;
             }
             .btn-search {
-              margin-top: 2px;
               display: block;
-              background-color: transparent;
+              background: transparent;
               box-shadow: none;
             }
           }
         }
       }
-      #whatsapp-wrapper {
-        position: absolute;
-        bottom: 40px;
-        right: 20px;
-        height: 49px;
-        width: 49px;
-        border-radius: 100%;
-        background-color: #1cba75;
-        overflow: hidden;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        z-index: 1;
-        #stateLayer {
-          display: flex;
-          flex-direction: row;
-          align-items: center;
-          justify-content: center;
-          padding: 8px;
-          #maskGroupIcon {
-            font-size: 35px;
-          }
-        }
-      }
     }
-  }
-  #sidebarWrapper {
-    width: 100%;
-    padding-right: 0;
   }
 }
 

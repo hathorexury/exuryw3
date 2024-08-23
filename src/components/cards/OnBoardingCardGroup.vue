@@ -168,7 +168,6 @@ const checkCurrentFrame = (value: number) => {
   .cards-wrapper {
     margin-top: 15px;
     position: relative;
-    flex: 1;
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -176,9 +175,8 @@ const checkCurrentFrame = (value: number) => {
     gap: 10px;
     font-size: 25.03px;
     color: #1cba75;
-    height: 80%;
-    max-height: 80%;
-    overflow: hidden;
+    height: fit-content;
+    max-height: fit-content;
     width: 100%;
     max-width: 100%;
     .cards-transition-group::-webkit-scrollbar {
@@ -192,7 +190,6 @@ const checkCurrentFrame = (value: number) => {
       gap: 8px;
       padding: 20px 30px 20px 0;
       height: fit-content;
-      min-height: 680px;
       width: 100%;
       max-width: 100%;
       overflow: scroll;
@@ -201,12 +198,12 @@ const checkCurrentFrame = (value: number) => {
     }
     .card-left-navigation-wrapper {
       position: absolute;
-      top: calc(45% - 20px);
+      top: calc(40% - 20px);
       left: 10px;
     }
     .card-right-navigation-wrapper {
       position: absolute;
-      top: calc(45% - 20px);
+      top: calc(40% - 20px);
       right: 10px;
     }
   }
@@ -239,13 +236,12 @@ const checkCurrentFrame = (value: number) => {
     left: 0;
   }
   .dotParent {
-    position: absolute;
+    position: relative;
     width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    bottom: 16px;
     padding-bottom: 6px;
     gap: 4px;
     z-index: 100;
