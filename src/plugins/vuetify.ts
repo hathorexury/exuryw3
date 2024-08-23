@@ -20,7 +20,6 @@ export default createVuetify({
   components,
   directives,
   theme: {
-    options: { customProperties: true },
     defaultTheme: "dark",
     themes: {
       dark: {

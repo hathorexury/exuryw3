@@ -1,6 +1,6 @@
 {
-  "name": "vuetify-project",
-  "version": "0.0.0",
+  "name": "@hathorexury/exuryw3",
+  "version": "1.0.0",
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
@@ -8,10 +8,15 @@
     "lint": "eslint . --fix --ignore-path .gitignore",
     "format": "npx prettier . --write"
   },
+  "license": "MIT",
+  "author": {
+    "name": "Hathorexury"
+  },
   "dependencies": {
     "@mdi/font": "6.2.95",
     "@vueuse/head": "^2.0.0",
     "core-js": "^3.34.0",
+    "normalize.css": "^8.0.1",
     "roboto-fontface": "*",
     "three": "^0.167.1",
     "vite-plugin-pages": "^0.32.3",

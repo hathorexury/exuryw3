@@ -1,6 +1,6 @@
 import { SidebarItem } from "@/domain/models/sidebar-item";
 import * as icons from "@/domain/constants/icons.constant";
-import {RoutesEnum} from "@/domain/enums/routes.enum";
+import { RoutesEnum } from "@/domain/enums/routes.enum";
 
 export const SIDEBAR_LINKS: SidebarItem[] = [
   {
@@ -21,10 +21,11 @@ export const SIDEBAR_LINKS: SidebarItem[] = [
     route: RoutesEnum.HOW_IT_WORKS,
     show: true,
   },
-  { title: "Discover us",
+  {
+    title: "Discover us",
     icon: "mdi-earth",
     route: RoutesEnum.DISCOVER,
-    show: true
+    show: true,
   },
   {
     title: "Community",
@@ -38,10 +39,12 @@ export const SIDEBAR_LINKS: SidebarItem[] = [
     route: RoutesEnum.COMPANY,
     show: true,
   },
-  { title: "Blog",
+  {
+    title: "Blog",
     icon: "mdi-file-document",
     route: RoutesEnum.BLOG,
-    show: true },
+    show: true,
+  },
   {
     title: "FAQ",
     icon: icons.FAQ_ICON,

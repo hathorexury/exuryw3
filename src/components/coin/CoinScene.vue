@@ -6,7 +6,6 @@
           { initialRotationX: 2, initialRotationY: 1.5 },
           { initialRotationX: 5, initialRotationY: 3 },
           { initialRotationX: 1, initialRotationY: 2 },
-          { initialRotationX: 2, initialRotationY: 1.5 },
           { initialRotationX: 5, initialRotationY: 3 },
           { initialRotationX: 1, initialRotationY: 2 },
           { initialRotationX: 2, initialRotationY: 1.5 },

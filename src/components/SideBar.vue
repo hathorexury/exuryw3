@@ -5,13 +5,9 @@ import { useHead } from "@vueuse/head";
 import { SIDEBAR_LINKS } from "@/domain/constants/sidebar.constant";
 import { useAppStore } from "@/infraestructure/stores/app";
 import { SidebarItem } from "@/domain/models/sidebar-item";
-import { CART_ICON, HOME_ICON } from "@/domain/constants/icons.constant";
-import {
-  BUY_CRYPTO_URL,
-  DASHBOARD_URL,
-} from "@/domain/constants/url-pages.constant";
+import { CART_ICON } from "@/domain/constants/icons.constant";
+import { BUY_CRYPTO_URL } from "@/domain/constants/url-pages.constant";
 import { linksToShow } from "@/application/mappers/sidebar-mapper";
-import {RoutesEnum} from "@/domain/enums/routes.enum";
 
 const router = useRouter();
 const route = useRoute();
@@ -53,19 +49,15 @@ const goToBuyCrypto = (): void => {
   appStore.setPageIcon(CART_ICON);
   router.push(BUY_CRYPTO_URL);
 };
-
-const goToHome = (): void => {
-  appStore.setActivePage(RoutesEnum.HOME);
-  appStore.setPageIcon(HOME_ICON);
-  router.push(RoutesEnum.HOME);
-};
 </script>
 
 <template>
   <v-navigation-drawer
     class="sidebar rounded-te-0 rounded-be-0"
     :class="{ 'collapsed-drawer': isCollapsed }"
-    :rail="isCollapsed" permanent>
+    :rail="isCollapsed"
+    permanent
+  >
     <v-list dense>
       <v-list-item class="btn-menu-wrapper justify-center py-3 ml-2 mb-6">
         <v-btn icon="" @click="toggle" class="menu-fab">
@@ -73,14 +65,23 @@ const goToHome = (): void => {
         </v-btn>
       </v-list-item>
 
-      <v-list-item-group v-model="route.path" density="compact" nav :class="['options-bar', { 'item-group': isCollapsed }]">
+      <v-list-item-group
+        v-model="route.path"
+        density="compact"
+        nav
+        :class="['options-bar', { 'item-group': isCollapsed }]"
+      >
         <v-list-item
           rounded="xl"
           v-for="(link, index) in linksToShow"
           :key="link.title"
           @click="handleItem(link)"
           :title="link.title"
-          :class="['nav-item', { 'active-link': route.path === link.route }, { 'mb-2': index === 4 }]"
+          :class="[
+            'nav-item',
+            { 'active-link': route.path === link.route },
+            { 'mb-2': index === 4 },
+          ]"
         >
           <template v-slot:prepend>
             <v-icon
@@ -97,7 +98,10 @@ const goToHome = (): void => {
               :class="{ active: route.path === link.route }"
             />
           </template>
-          <hr v-if="index===4" class="position-absolute left-0 mt-4 w-100 opacity-20"/>
+          <hr
+            v-if="index === 4"
+            class="position-absolute left-0 mt-4 w-100 opacity-20"
+          />
         </v-list-item>
       </v-list-item-group>
     </v-list>
@@ -110,7 +114,7 @@ const goToHome = (): void => {
           :class="{ 'button-buy-crypto': isCollapsed }"
           @click="goToBuyCrypto()"
         >
-          <v-icon :class="{'mr-2': !isCollapsed}">mdi-currency-btc</v-icon>
+          <v-icon :class="{ 'mr-2': !isCollapsed }">mdi-currency-btc</v-icon>
           <span v-if="!isCollapsed" class="text-capitalize">Buy Crypto</span>
         </v-btn>
       </div>
@@ -139,7 +143,8 @@ const goToHome = (): void => {
   color: #a1a3a3;
 }
 .custom-svg-icon.active {
-  filter: invert(49%) sepia(62%) saturate(2000%) hue-rotate(98deg) brightness(90%) contrast(80%);
+  filter: invert(49%) sepia(62%) saturate(2000%) hue-rotate(98deg)
+    brightness(90%) contrast(80%);
   opacity: 0.7;
 }
 .menu-fab {
@@ -180,7 +185,7 @@ const goToHome = (): void => {
     opacity: 0;
     transition: opacity 0.05s ease-in-out;
   }
-  .sidebar.collapsed-drawer{
+  .sidebar.collapsed-drawer {
     background-color: transparent;
     transition: background-color 0.2s ease-in-out;
   }

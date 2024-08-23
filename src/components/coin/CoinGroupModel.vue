@@ -9,7 +9,7 @@
 </template>
 
 <script setup lang="ts">
-import CoinModel from './CoinModel.vue';
+import CoinModel from "./CoinModel.vue";
 </script>
 
 <style lang="scss" scoped>
@@ -34,12 +34,24 @@ import CoinModel from './CoinModel.vue';
   //animation: coin-spin 4s linear infinite;
 }
 
-.coin-wrapper:nth-child(1) { transform: rotate(0deg) translateX(230px); }
-.coin-wrapper:nth-child(2) { transform: rotate(45deg) translateX(100px); }
-.coin-wrapper:nth-child(3) { transform: rotate(90deg) translateX(230px); }
-.coin-wrapper:nth-child(4) { transform: rotate(135deg) translateX(50px); }
-.coin-wrapper:nth-child(5) { transform: rotate(180deg) translateX(230px); }
-.coin-wrapper:nth-child(6) { transform: rotate(225deg) translateX(150px); }
+.coin-wrapper:nth-child(1) {
+  transform: rotate(0deg) translateX(230px);
+}
+.coin-wrapper:nth-child(2) {
+  transform: rotate(45deg) translateX(100px);
+}
+.coin-wrapper:nth-child(3) {
+  transform: rotate(90deg) translateX(230px);
+}
+.coin-wrapper:nth-child(4) {
+  transform: rotate(135deg) translateX(50px);
+}
+.coin-wrapper:nth-child(5) {
+  transform: rotate(180deg) translateX(230px);
+}
+.coin-wrapper:nth-child(6) {
+  transform: rotate(225deg) translateX(150px);
+}
 // .coin-wrapper:nth-child(1) { transform: rotate(0deg) translateX(230px); }
 //.coin-wrapper:nth-child(2) { transform: rotate(45deg) translateX(230px); }
 //.coin-wrapper:nth-child(3) { transform: rotate(90deg) translateX(230px); }

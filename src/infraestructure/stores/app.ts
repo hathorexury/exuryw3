@@ -1,11 +1,17 @@
 import { defineStore } from "pinia";
-import {RoutesEnum} from "@/domain/enums/routes.enum";
+import { RoutesEnum } from "@/domain/enums/routes.enum";
 
 export const useAppStore = defineStore("app", {
-  state: () => ({
-    activePage: RoutesEnum.DISCOVER,
-    pageIcon: "mdi-home",
-  }),
+  state: () =>
+    <
+      {
+        activePage: string;
+        pageIcon: string;
+      }
+    >{
+      activePage: RoutesEnum.DISCOVER,
+      pageIcon: "mdi-home",
+    },
   actions: {
     setActivePage(page: string) {
       this.activePage = page;

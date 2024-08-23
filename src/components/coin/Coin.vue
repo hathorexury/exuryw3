@@ -6,7 +6,7 @@
 import { ref, onMounted, onBeforeUnmount, defineProps } from "vue";
 import * as THREE from "three";
 import { OBJLoader } from "three/examples/jsm/loaders/OBJLoader";
-import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
+import { Mesh } from "three";
 
 const props = defineProps<{
   models?: { initialRotationX: number; initialRotationY: number }[];
@@ -16,7 +16,6 @@ const container = ref<HTMLDivElement | null>(null);
 let scene: THREE.Scene;
 let camera: THREE.PerspectiveCamera;
 let renderer: THREE.WebGLRenderer;
-let controls: OrbitControls;
 let models: { object: THREE.Object3D; animation: () => void }[] = [];
 const minHeightOffset = -0.3;
 const maxHeightOffset = 0.3;
@@ -31,7 +30,7 @@ onMounted(() => {
     75,
     window.innerWidth / window.innerHeight,
     0.1,
-    1000
+    1000,
   );
   camera.position.z = 1.5;
   camera.position.y = 0;
@@ -66,22 +65,22 @@ onMounted(() => {
   const textureLoader = new THREE.TextureLoader();
 
   const normalTexture = textureLoader.load(
-    "/src/assets/Textures/DefaultMaterial_Normal_OpenGL.png"
+    "/assets/Textures/DefaultMaterial_Normal_OpenGL.png",
   );
   const objLoader = new OBJLoader();
   const modelsToLoad =
     props.models && props.models.length > 0 ? props.models : [{}];
 
-  modelsToLoad.forEach((modelProps, index) => {
+  modelsToLoad.forEach((modelProps: any, index) => {
     const baseColorTexture = textureLoader.load(
       index % 2 === 0
-        ? "/src/assets/Textures/DefaultMaterial_Base_Color.png"
-        : "/src/assets/Textures/DefaultMaterial_Base_Color2.png"
+        ? "/assets/Textures/DefaultMaterial_Base_Color.png"
+        : "/assets/Textures/DefaultMaterial_Base_Color2.png",
     );
-    objLoader.load("/src/assets/OBJ/SimpleGoldCoin.obj", (object) => {
+    objLoader.load("/assets/OBJ/SimpleGoldCoin.obj", (object) => {
       const model = object;
 
-      model.traverse((child) => {
+      model.traverse((child: Mesh) => {
         if ((child as THREE.Mesh).isMesh) {
           const mesh = child as THREE.Mesh;
           mesh.material = new THREE.MeshStandardMaterial({
@@ -104,7 +103,7 @@ onMounted(() => {
       model.position.set(
         radius * Math.cos(angle),
         heightOffset,
-        radius * Math.sin(angle)
+        radius * Math.sin(angle),
       );
 
       const animateModel = () => {

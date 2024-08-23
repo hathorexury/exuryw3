@@ -17,8 +17,7 @@
   </v-container>
 </template>
 
-<script setup lang="ts">
-</script>
+<script setup lang="ts"></script>
 
 <style lang="scss" scoped>
 @import "./coin.scss";
@@ -42,25 +41,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  //font-size: 100px;
-  //font-family: 'Arial', sans-serif;
-  //color: black;
-  //box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-  //text-shadow:
-  //  1px 1px 1px #fff,
-  //  2px 2px 2px #bbb,
-  //  3px 3px 3px #999;
 }
 
 .front {
-  //position: absolute;
-  //top: -1px;
-  //left: -1px;
-  background-image: url('@/assets/coin_front_face.png');
-  //background-size: 895px;
+  background-image: url("/assets/coin_front_face.png");
   background-size: 230px;
   background-position: center;
-  //background-color: #46C985; /* Color del filtro */
   background-color: #3dff9b;
   background-blend-mode: multiply;
   transform: translateZ(-2px);
@@ -70,8 +56,7 @@
   position: absolute;
   top: -1px;
   left: -1px;
-  background-image: url('@/assets/coin_front_face.png');
-  //background-size: 895px;
+  background-image: url("/assets/coin_front_face.png");
   background-size: 230px;
   background-position: center;
   background-color: #3dff9b;
@@ -84,99 +69,90 @@
   top: $edge-top;
   left: $edge-left;
   width: $edge-width;
-  height:$edge-height;
+  height: $edge-height;
   background-color: $edge-background-color;
   border-radius: 50%;
   transform: translateZ(-1px);
-  //box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
 }
 .edge:nth-child(2) {
   position: absolute;
   top: $edge-top;
   left: $edge-left;
   width: $edge-width;
-  height:$edge-height;
+  height: $edge-height;
   background-color: $edge-background-color;
   border-radius: 50%;
   transform: translateZ(-2px);
-  //box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
 }
 .edge:nth-child(3) {
   position: absolute;
   top: $edge-top;
   left: $edge-left;
   width: $edge-width;
-  height:$edge-height;
+  height: $edge-height;
   background-color: $edge-background-color;
   border-radius: 50%;
   transform: translateZ(-3px);
-  //box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
 }
 .edge:nth-child(4) {
   position: absolute;
   top: $edge-top;
   left: $edge-left;
   width: $edge-width;
-  height:$edge-height;
+  height: $edge-height;
   background-color: $edge-background-color;
   border-radius: 50%;
   transform: translateZ(-4px);
-  //box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
 }
 .edge:nth-child(5) {
   position: absolute;
   top: $edge-top;
   left: $edge-left;
   width: $edge-width;
-  height:$edge-height;
+  height: $edge-height;
   background-color: $edge-background-color;
   border-radius: 50%;
   transform: translateZ(-5px);
-  //box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
 }
 .edge:nth-child(6) {
   position: absolute;
   top: $edge-top;
   left: $edge-left;
   width: $edge-width;
-  height:$edge-height;
+  height: $edge-height;
   background-color: $edge-background-color;
   border-radius: 50%;
   transform: translateZ(-6px);
-  //box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
 }
 .edge:nth-child(7) {
   position: absolute;
   top: $edge-top;
   left: $edge-left;
   width: $edge-width;
-  height:$edge-height;
+  height: $edge-height;
   background-color: $edge-background-color;
   border-radius: 50%;
   transform: translateZ(-7px);
-  //box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
 }
 .edge:nth-child(8) {
   position: absolute;
   top: $edge-top;
   left: $edge-left;
   width: $edge-width;
-  height:$edge-height;
+  height: $edge-height;
   background-color: $edge-background-color;
   border-radius: 50%;
   transform: translateZ(-8px);
-  //box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
 }
 .edge:nth-child(9) {
   position: absolute;
   top: $edge-top;
   left: $edge-left;
   width: $edge-width;
-  height:$edge-height;
+  height: $edge-height;
   background-color: $edge-background-color;
   border-radius: 50%;
   transform: translateZ(-9px);
-  //box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .mask {
@@ -184,7 +160,11 @@
   width: $coin-width;
   height: $coin-height;
   border-radius: 50%;
-  background-image: radial-gradient(circle, transparent 70%, rgba(3, 61, 31, 0.67) 60%);
+  background-image: radial-gradient(
+    circle,
+    transparent 70%,
+    rgba(3, 61, 31, 0.67) 60%
+  );
   border: 1px solid rgba(70, 201, 133, 0.43);
   top: 0;
   left: 0;
