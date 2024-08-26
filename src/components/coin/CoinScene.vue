@@ -21,6 +21,7 @@ import Coin from "./Coin.vue";
 
 <style lang="scss" scoped>
 @import "./coin.scss";
+@import "@/styles/variables.scss";
 .circle-container {
   display: flex;
   justify-content: center;
