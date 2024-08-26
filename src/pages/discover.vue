@@ -120,7 +120,7 @@ const mouseLeaveCardGroup = () => {
       </transition-group>
       <div class="dotParent">
         <div
-            v-for="(frame, index) in frames"
+            v-for="(_frame, index) in frames"
             :key="index"
             :class="
             index === currentFrame ? 'dotActive' : 'dotInactive'

@@ -3,7 +3,7 @@
 </template>
 
 <script lang="ts" setup>
-import { ref, onMounted, onBeforeUnmount, defineProps } from "vue";
+import { ref, onMounted, onBeforeUnmount } from "vue";
 import * as THREE from "three";
 import { OBJLoader } from "three/examples/jsm/loaders/OBJLoader";
 import { Mesh } from "three";
@@ -32,7 +32,7 @@ onMounted(() => {
     0.1,
     1000,
   );
-  camera.position.z = 1;
+  camera.position.z = 1.5;
   camera.position.y = 0;
   camera.position.x = 0;
 
@@ -151,6 +151,7 @@ onMounted(() => {
 
 <style lang="scss" scoped>
 @import "./coin.scss";
+@import "@/styles/variables.scss";
 .three-container {
   width: $coin-scene-width;
   height: $coin-scene-height;

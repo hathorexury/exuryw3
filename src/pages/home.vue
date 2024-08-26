@@ -190,111 +190,27 @@
 }
 .coins-wrapper {
   position: absolute;
-  top: 0;
-  right: -50px;
+  top: -10px;
+  right: 0;
   width: fit-content;
   height: 100%;
   display: flex;
   align-items: center;
 }
-//@media (max-width: $screen-md) {
-//  .home-wrapper {
-//    margin: 0 !important;
-//    min-height: 90%;
-//    max-height: 80%;
-//    box-sizing: border-box;
-//    gap: 32px;
-//    z-index: 1;
-//    font-size: 64px;
-//    position: relative;
-//    overflow-x: hidden;
-//    display: flex;
-//    flex-direction: column;
-//    justify-content: start;
-//    overflow-y: auto;
-//  }
-//  .main-content {
-//    align-self: stretch;
-//    display: flex;
-//    flex-direction: column;
-//    align-items: flex-start;
-//    justify-content: flex-start;
-//    position: relative;
-//    gap: 8px;
-//    margin-bottom: 32px;
-//    padding: 0 16px;
-//  }
-//  .coins-wrapper {
-//    position: absolute;
-//    top: -640px;
-//    left: -150px;
-//  }
-//  .title-wrapper {
-//    position: relative;
-//    letter-spacing: 0.5px;
-//    z-index: 1;
-//    display: block;
-//
-//    .title-top {
-//      width: 100%;
-//      margin: 0;
-//      line-height: 4rem;
-//      display: inline-block;
-//      font-size: 48px;
-//    }
-//
-//    .title-accent {
-//      display: inline-block;
-//      font-size: 48px;
-//    }
-//  }
-//  .paragraph-wrapper {
-//    width: 100%;
-//    align-self: stretch;
-//    position: relative;
-//    font-size: 1rem;
-//    letter-spacing: 0.5px;
-//    z-index: 2;
-//  }
-//  .buttons-wrapper {
-//    width: 100%;
-//    height: fit-content;
-//    display: flex;
-//    flex-direction: column-reverse;
-//    align-items: center;
-//    justify-content: flex-start;
-//    gap: 16px;
-//    text-align: center;
-//    font-size: 14px;
-//    color: #1cba75;
-//    margin-bottom: 113px;
-//    .btn-how-it-works, .btn-buy-crypto {
-//      width: 100%;
-//      height: 50px;
-//    }
-//  }
-//
-//  .sponsorship-wrapper {
-//    left: 16px;
-//    .sponsor-left {
-//      width: 76px;
-//      position: relative;
-//      height: 64px;
-//      object-fit: cover;
-//    }
-//    .sponsor-right {
-//      width: 136px;
-//      position: relative;
-//      height: 30px;
-//      object-fit: cover;
-//    }
-//  }
-//}
+@media (max-width: $screen-md) {
+  .home-wrapper {
+    .coins-wrapper {
+      position: absolute;
+      top: -160px;
+      left: 0;
+    }
+  }
+}
 @media (max-width: $screen-sm) {
   .home-wrapper {
     min-height: 100%;
-    height: 100px;
-    max-height: 100px;
+    height: fit-content;
+    max-height: fit-content;
     width: 100%;
     justify-content: start;
     .main-content {
@@ -302,8 +218,10 @@
       justify-content: start;
       .coins-wrapper {
         position: relative;
-        top: -50px;
-        right: 150px;
+        top: -100px;
+        left: -150px;
+        width: fit-content;
+        height: fit-content;
       }
       .content-wrapper {
         position: relative;
@@ -311,7 +229,7 @@
         .title-wrapper {
           padding: 0 16px;
           width: 100%;
-
+          margin-top: -390px;
           .title-top {
             width: 75%;
             font-size: 32px;
@@ -342,15 +260,10 @@
           display: flex;
           flex-direction: column-reverse;
           padding: 0 16px;
+          margin-bottom: 63px;
           .btn-how-it-works, .btn-buy-crypto{
             width: 100%;
             padding: 10px 24px;
-          }
-          .btn-how-it-works {
-
-          }
-          .btn-buy-crypto{
-
           }
         }
       }
@@ -367,6 +280,22 @@
         .sponsor-right {
           width: 150px;
         }
+      }
+    }
+  }
+}
+
+@media (max-width: $screen-xs) {
+  .home-wrapper {
+    .main-content {
+      .coins-wrapper {
+        top: -120px;
+      }
+      .content-wrapper {
+        top: -200px;
+      }
+      .sponsorship-wrapper{
+        margin-top: -200px;
       }
     }
   }

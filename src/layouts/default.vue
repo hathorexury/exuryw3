@@ -79,7 +79,7 @@
                 </ul>
               </div>
               <div>
-                <h2>Newsletter</h2>
+                <h2 class="newsletter">Newsletter</h2>
                 <v-text-field
                   append-inner-icon="mdi-email-outline"
                   label="Email"
@@ -293,118 +293,6 @@
   align-items: center;
   justify-content: center;
 }
-#menuFab {
-  width: 80px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-}
-#icon1 {
-  width: 24px;
-  position: relative;
-  height: 24px;
-  overflow: hidden;
-  flex-shrink: 0;
-}
-#stateLayer1 {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  padding: 16px;
-}
-#container1 {
-  border-radius: 100px;
-  background-color: #d5ffed;
-  overflow: hidden;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-}
-#navItem1 {
-  align-self: stretch;
-  height: 56px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-}
-#divider {
-  align-self: stretch;
-  position: relative;
-  border-top: 1px solid #cac4d0;
-  box-sizing: border-box;
-  height: 1px;
-}
-#divider1 {
-  align-self: stretch;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  padding: 0px 16px;
-}
-#navItem5 {
-  width: 80px;
-  height: 56px;
-  display: none;
-}
-#destinations {
-  align-self: stretch;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-#fab {
-  box-shadow:
-      0px 4px 8px 3px rgba(0, 0, 0, 0.15),
-      0px 1px 3px rgba(0, 0, 0, 0.3);
-  border-radius: 16px;
-  background-color: #1cba75;
-  overflow: hidden;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-}
-#destinationsParent {
-  align-self: stretch;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-}
-#supportingText {
-  position: relative;
-  letter-spacing: 0.5px;
-  line-height: 24px;
-}
-#content1 {
-  align-self: stretch;
-  flex: 1;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-}
-#trailingElements {
-  width: 48px;
-  height: 48px;
-}
-#stateLayer10 {
-  align-self: stretch;
-  flex: 1;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-  padding: 4px;
-  gap: 4px;
-}
 .searchBar {
   width: 360px;
   border-radius: 28px;
@@ -430,14 +318,6 @@
 }
 .btn-search {
   display: none;
-}
-#genericAvatarIcon {
-  width: 40px;
-  position: relative;
-  border-radius: 100px;
-  height: 40px;
-  overflow: hidden;
-  flex-shrink: 0;
 }
 #iconButtonParent {
   display: flex;
@@ -473,6 +353,104 @@
 
 @media (max-width: $screen-md) {
   .main {
+    .list {
+      .listInner {
+        position: relative;
+        left: -220px;
+        min-width: calc(100% - 16px);
+        .top-bar-wrapper {
+          .searchBarWrapper {
+            width: 56px;
+            max-width: 56px;
+            .searchBar{
+              display: none;
+            }
+            .btn-search {
+              display: block;
+              background: transparent;
+              box-shadow: none;
+            }
+          }
+        }
+        .footer-wrapper{
+          width: 100%;
+          height: fit-content;
+          padding: 0 16px;
+          margin-top: 64px;
+          .footer-top {
+            padding: 14px 16px;
+            background: #e1ece7;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            color: #323836;
+            border-radius: 4px;
+            margin-bottom: 50px;
+            margin-top: 64px;
+          }
+          .footer-mid {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin-bottom: 64px;
+            gap: 48px;
+            .btn-subscribe {
+              width: 100%;
+              padding: 24px 10px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+            .logo-footer {
+              margin-bottom: 30px;
+              width: 147px;
+            }
+            div:nth-child(1){
+              width: 250px;
+              p {
+                margin-bottom: 5px;
+              }
+            }
+            h2 {
+              color: #E6E1E3;
+              font-size: 18px;
+              font-style: normal;
+              font-weight: 700;
+              line-height: 28px;
+            }
+            ul li {
+              color: #E6E1E3;
+              font-size: 16px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: normal;
+              opacity: 0.65;
+              list-style: none;
+              margin-bottom: 16px;
+            }
+            .newsletter {
+              margin-bottom: 25px;
+            }
+          }
+          .footer-bottom {
+            padding: 23px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            gap: 48px;
+            .social-icons > * {
+              margin-right: 16px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $screen-sm) {
+  .main {
     padding: 0;
     margin: 0;
     .list {
@@ -486,6 +464,9 @@
       overflow: hidden;
       padding: 0;
       .listInner {
+        position: relative;
+        left: 0;
+        min-width: 100%;
         .top-bar-wrapper {
           margin-top: 16px;
           width: 100%;
@@ -507,11 +488,196 @@
             }
           }
         }
+        .footer-wrapper{
+          width: 100%;
+          height: fit-content;
+          padding: 0 16px;
+          margin-top: 50px;
+          .footer-top {
+            padding: 14px 16px;
+            background: #e1ece7;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            color: #323836;
+            border-radius: 4px;
+            margin-bottom: 50px;
+            margin-top: 64px;
+          }
+          .footer-mid {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin-bottom: 64px;
+            gap: 48px;
+            .btn-subscribe {
+              width: 100%;
+              padding: 24px 10px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+            .logo-footer {
+              margin-bottom: 30px;
+              width: 147px;
+            }
+            div:nth-child(1){
+              width: 250px;
+              p {
+                margin-bottom: 5px;
+              }
+            }
+            h2 {
+              color: #E6E1E3;
+              font-size: 18px;
+              font-style: normal;
+              font-weight: 700;
+              line-height: 28px;
+            }
+            ul li {
+              color: #E6E1E3;
+              font-size: 16px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: normal;
+              opacity: 0.65;
+              list-style: none;
+              margin-bottom: 16px;
+            }
+            .newsletter {
+              margin-bottom: 25px;
+            }
+          }
+          .footer-bottom {
+            padding: 23px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            gap: 48px;
+            .social-icons > * {
+              margin-right: 16px;
+            }
+          }
+        }
       }
     }
   }
 }
 
+@media (max-width: $screen-xs) {
+  .main {
+    padding: 0;
+    margin: 0;
+    .list {
+      position: absolute;
+      display: block;
+      width: calc(100% - 32px);
+      height: calc(100% - 32px);
+      margin: 0;
+      left: 16px;
+      top: 16px;
+      overflow: hidden;
+      padding: 0;
+      .listInner {
+        position: relative;
+        left: 0;
+        min-width: 100%;
+        .top-bar-wrapper {
+          margin-top: 16px;
+          width: 100%;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: flex-end;
+          padding-right: 16px;
+          .searchBarWrapper {
+            display: none;
+            .searchBar{
+              display: none;
+            }
+            .btn-search {
+              display: block;
+              background: transparent;
+              box-shadow: none;
+            }
+          }
+        }
+        .footer-wrapper{
+          width: 100%;
+          height: fit-content;
+          padding: 0 16px;
+          .footer-top {
+            padding: 14px 16px;
+            background: #e1ece7;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            color: #323836;
+            border-radius: 4px;
+            margin-bottom: 50px;
+            margin-top: 64px;
+          }
+          .footer-mid {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin-bottom: 64px;
+            gap: 48px;
+            .btn-subscribe {
+              width: 100%;
+              padding: 24px 10px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+            .logo-footer {
+              margin-bottom: 30px;
+              width: 147px;
+            }
+            div:nth-child(1){
+              width: 250px;
+              p {
+                margin-bottom: 5px;
+              }
+            }
+            h2 {
+              color: #E6E1E3;
+              font-size: 18px;
+              font-style: normal;
+              font-weight: 700;
+              line-height: 28px;
+            }
+            ul li {
+              color: #E6E1E3;
+              font-size: 16px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: normal;
+              opacity: 0.65;
+              list-style: none;
+              margin-bottom: 16px;
+            }
+            .newsletter {
+              margin-bottom: 25px;
+            }
+          }
+          .footer-bottom {
+            padding: 23px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            gap: 48px;
+            .social-icons > * {
+              margin-right: 16px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
 </style>
 
 <script lang="ts" setup>

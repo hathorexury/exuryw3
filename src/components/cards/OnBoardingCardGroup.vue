@@ -39,9 +39,10 @@ const setFrame = (index: number) => {
 };
 
 const nextFrame = () => {
-  if (currentFrame.value >= 1) {
-    scrollToRight();
-  }
+  scrollToRight();
+  // if (currentFrame.value >= 1) {
+  //   scrollToRight();
+  // }
   currentFrame.value = (currentFrame.value + 1) % frames.value.length;
 };
 
@@ -60,7 +61,7 @@ const scrollToRight = () => {
   const container = document.querySelector(".cards-transition-group");
   const card = document.querySelector(".card-selected") as HTMLElement;
   if (container && card) {
-    container.scrollBy({ left: card.offsetWidth, behavior: "smooth" });
+    container.scrollBy({ left: (card.offsetWidth - 46), behavior: "smooth" });
   }
 };
 
@@ -68,7 +69,7 @@ const scrollToLeft = () => {
   const container = document.querySelector(".cards-transition-group");
   const card = document.querySelector(".card-selected") as HTMLElement;
   if (container && card) {
-    container.scrollBy({ left: -card.offsetWidth + 100, behavior: "smooth" });
+    container.scrollBy({ left: -card.offsetWidth + 46, behavior: "smooth" });
   }
 };
 
@@ -164,143 +165,120 @@ const checkCurrentFrame = (value: number) => {
 
 <style lang="scss" scoped>
 @import "@/styles/variables.scss";
-@media (max-width: $screen-base) {
-  .cards-wrapper {
-    margin-top: 15px;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    justify-content: start;
-    gap: 10px;
-    font-size: 25.03px;
-    color: #1cba75;
-    height: fit-content;
-    max-height: fit-content;
-    width: 100%;
-    max-width: 100%;
-    .cards-transition-group::-webkit-scrollbar {
-      display: none;
-    }
-    .cards-transition-group {
-      display: flex;
-      flex-direction: row;
-      align-items: start;
-      justify-content: flex-start;
-      gap: 8px;
-      padding: 20px 30px 20px 0;
-      height: fit-content;
-      width: 100%;
-      max-width: 100%;
-      overflow: scroll;
-      -ms-overflow-style: none;
-      scrollbar-width: none;
-    }
-    .card-left-navigation-wrapper {
-      position: absolute;
-      top: calc(40% - 20px);
-      left: 10px;
-    }
-    .card-right-navigation-wrapper {
-      position: absolute;
-      top: calc(40% - 20px);
-      right: 10px;
-    }
+.cards-wrapper {
+  margin-top: 15px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  gap: 10px;
+  font-size: 25.03px;
+  color: #1cba75;
+  height: fit-content;
+  max-height: fit-content;
+  width: 100%;
+  max-width: 100%;
+  .cards-transition-group::-webkit-scrollbar {
+    display: none;
   }
-  .dotActive {
-    width: 24px;
-    position: relative;
-    border-radius: 33px;
-    height: 8px;
-    overflow: hidden;
-    flex-shrink: 0;
-    background-color: #1cba75;
-    cursor: pointer;
-  }
-  .dotInactive {
-    width: 8px;
-    position: relative;
-    border-radius: 33px;
-    height: 8px;
-    overflow: hidden;
-    flex-shrink: 0;
-    background-color: #ededed;
-    cursor: pointer;
-  }
-  .dotItem {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    right: 0;
-    left: 0;
-  }
-  .dotParent {
-    position: relative;
-    width: 100%;
+  .cards-transition-group {
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    padding-bottom: 6px;
-    gap: 4px;
-    z-index: 100;
+    align-items: start;
+    justify-content: flex-start;
+    gap: 8px;
+    padding: 20px 30px 20px 0;
+    height: fit-content;
+    width: 100%;
+    max-width: 100%;
+    overflow: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
+  .card-left-navigation-wrapper {
+    position: absolute;
+    top: calc(40% - 20px);
+    left: 10px;
+  }
+  .card-right-navigation-wrapper {
+    position: absolute;
+    top: calc(40% - 20px);
+    right: 10px;
+  }
+}
+.dotActive {
+  width: 24px;
+  position: relative;
+  border-radius: 33px;
+  height: 8px;
+  overflow: hidden;
+  flex-shrink: 0;
+  background-color: #1cba75;
+  cursor: pointer;
+}
+.dotInactive {
+  width: 8px;
+  position: relative;
+  border-radius: 33px;
+  height: 8px;
+  overflow: hidden;
+  flex-shrink: 0;
+  background-color: #ededed;
+  cursor: pointer;
+}
+.dotItem {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+.dotParent {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 6px;
+  gap: 4px;
+  z-index: 100;
 }
 @media (max-width: $screen-md) {
   .cards-wrapper {
-    max-height: 600px;
-    margin-top: -55px;
+    min-height: 520px;
+    max-height: 520px;
+    margin-top: 0;
+    overflow-y: hidden;
     .cards-transition-group {
-      padding: 60px 20px 20px 20px;
+      overflow-y: hidden;
+      min-height: 500px;
+      max-height: 500px;
+    }
+    .card-left-navigation-wrapper {
+      display: none;
+    }
+    .card-right-navigation-wrapper {
+      display: none;
     }
   }
-  .card-left-navigation-wrapper {
-    display: none;
-  }
-  .card-right-navigation-wrapper {
-    display: none;
-  }
+}
 
-  .dotActive {
-    width: 24px;
-    position: relative;
-    border-radius: 33px;
-    height: 8px;
-    overflow: hidden;
-    flex-shrink: 0;
-    background-color: #1cba75;
-    cursor: pointer;
-  }
-  .dotInactive {
-    width: 8px;
-    position: relative;
-    border-radius: 33px;
-    height: 8px;
-    overflow: hidden;
-    flex-shrink: 0;
-    background-color: #ededed;
-    cursor: pointer;
-  }
-  .dotItem {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    top: -20px;
-    right: 0;
-    left: 0;
+@media (max-width: $screen-sm) {
+  .cards-wrapper {
+    margin-top: -20px;
+    .cards-transition-group {
+      margin-top: 24px;
+      padding: 20px 20px 0 20px;
+    }
   }
   .dotParent {
     position: absolute;
-    top: -40px;
-    right: 16px;
-    width: fit-content;
-    height: 100px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 4px;
+    top: 0;
+    justify-content: end;
+    padding: 0 16px 0 0;
   }
 }
 </style>
