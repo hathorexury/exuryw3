@@ -22,7 +22,7 @@
           <p class="title-top">
             Gana más, arriesga menos.
           </p>
-          <span class="title-accent">¡Descubre el 1er
+          <span class="title-accent">¡Descubre el 1<sup>er</sup>
             exchange sin custodia!</span>
         </div>
         <div class="paragraph-wrapper">
