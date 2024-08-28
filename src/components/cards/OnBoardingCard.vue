@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-import { defineProps, defineEmits } from "vue";
 
 const props = defineProps<{
   frame: {
@@ -9,16 +8,22 @@ const props = defineProps<{
   };
   isSelected: boolean;
   index: number;
+  currentFrame: number;
 }>();
 const emit = defineEmits(["select"]);
 
+const isThisNextCard = computed(() => {
+  return props.index === props.currentFrame + 1;
+});
+
 const selectFrame = () => {
-  emit("select", props.index);
+  return;
+  // emit("select", props.index);
 };
 </script>
 
 <template>
-  <div @click="selectFrame" :class="[isSelected ? 'card-selected' : 'card']">
+  <div @click="selectFrame" :class="[isSelected ? 'card-selected' : isThisNextCard ? 'card-next' : 'card' ]">
     <div class="card-content">
       <img class="card-image" :src="frame.image" alt="card image" />
       <div class="card-text-wrapper">
@@ -33,7 +38,7 @@ const selectFrame = () => {
 
 <style lang="scss" scoped>
 @import "@/styles/variables.scss";
-.card {
+.card, .card-next{
   border-radius: 28px;
   background-color: #0d1513;
   border: 1px solid #2d4740;
@@ -50,10 +55,7 @@ const selectFrame = () => {
   opacity: 0.7;
   transition:
     transform 0.3s ease,
-    opacity 0.3s ease,
-    width 0.3s ease,
-    height 0.3s ease,
-    margin-top 0.3s ease;
+    opacity 0.3s ease;
 }
 .card-selected {
   border-radius: 28px;
@@ -73,10 +75,7 @@ const selectFrame = () => {
   opacity: 1;
   transition:
     transform 0.3s ease,
-    opacity 0.3s ease,
-    width 0.3s ease,
-    height 0.3s ease,
-    margin-top 0.3s ease;
+    opacity 0.3s ease;
 }
 .card-content {
   align-self: stretch;
@@ -123,26 +122,8 @@ const selectFrame = () => {
   }
 }
 @media (max-width: $screen-md) {
-  .card {
-    margin-top: 20px;
-    height: 411.7px;
-    width: 245px;
-    min-width: 245px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: flex-start;
-    padding: 36px;
-    opacity: 0.7;
-    transition:
-      margin 1s,
-      width 0.5s,
-      height 0.5s,
-      opacity 1s;
-  }
-  .card-selected {
-    height: fit-content;
+  .card-next {
+    height: 460px;
     width: 270px;
     min-width: 270px;
     overflow: hidden;
@@ -150,19 +131,64 @@ const selectFrame = () => {
     flex-direction: row;
     align-items: flex-start;
     justify-content: flex-start;
-    padding: 36px;
+    padding: 32px;
+    opacity: 0.7;
+    border-radius: 28px;
+    background-color: #0d1513;
+    border: 1px solid #2d4740;
+    box-sizing: border-box;
+    z-index: 1;
+  }
+  .card {
+    position: relative;
+    height: 460px;
+    width: 270px;
+    min-width: 270px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 32px;
+    opacity: 0.7;
+    z-index: 5;
+    transition: transform 0.3s ease, z-index 0.3s ease;
+    //transition:
+    //  margin 1s,
+    //  width 0.5s,
+    //  height 0.5s,
+    //  opacity 1s;
+  }
+
+  .card-selected {
+    margin: 0 10px;
+    height: 460px;
+    width: 270px;
+    min-width: 270px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 32px;
     opacity: 1;
-    transition:
-      margin 1s,
-      width 0.5s,
-      height 0.5s,
-      opacity 1s;
+    transform: scale(1.05);
+    transition: transform 0.3s ease, z-index 0.3s ease;
   }
   .card-content {
+    padding: 0;
+    width: 100%;
     .card-image {
       width: 142px;
       position: relative;
       object-fit: cover;
+    }
+    .card-title {
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      letter-spacing: -0.4px;
     }
     .description-selected {
       font-size: 16px;
