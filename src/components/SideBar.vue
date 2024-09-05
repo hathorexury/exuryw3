@@ -59,7 +59,7 @@ const goToBuyCrypto = (): void => {
     permanent
   >
     <v-list dense>
-      <v-list-item class="btn-menu-wrapper justify-center py-3 ml-2 mb-6">
+      <v-list-item class="btn-menu-wrapper justify-center pt-2 pb-3 ml-2 mb-6">
         <v-btn icon="" @click="toggle" class="menu-fab">
           <v-icon>mdi-menu</v-icon>
         </v-btn>
