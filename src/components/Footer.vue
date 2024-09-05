@@ -66,11 +66,11 @@
   margin-top: 60px;
   .footer-top {
     padding: 14px 16px;
-    background: #e1ece7;
+    background: #373f3c;
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
-    color: #323836;
+    color: #c7d4cf;
     border-radius: 4px;
     margin-bottom: 50px;
     margin-top: 64px;
@@ -133,11 +133,11 @@
     margin-top: 64px;
     .footer-top {
       padding: 14px 16px;
-      background: #e1ece7;
+      background: #373f3c;
       font-style: normal;
       font-weight: 400;
       font-size: 14px;
-      color: #323836;
+      color: #c7d4cf;
       border-radius: 4px;
       margin-bottom: 50px;
       margin-top: 64px;
