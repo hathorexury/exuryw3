@@ -25,6 +25,8 @@ watch(route, (newRoute) => {
   } else {
     useHead({ title: appStore.getActivePage });
   }
+  document.querySelector(".listInner").scrollTo(0,0)
+  isCollapsed.value = true;
 });
 
 onMounted(() => {
