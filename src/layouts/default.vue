@@ -35,7 +35,7 @@
               <div id="menu">
                 <div id="container">
                   <div id="stateLayer">
-                    <v-icon icon="mdi-bell-outline"></v-icon>
+                    <v-icon icon="mdi-web"></v-icon>
                   </div>
                 </div>
               </div>
