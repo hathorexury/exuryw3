@@ -44,8 +44,8 @@ const selectFrame = () => {
   border: 1px solid #2d4740;
   box-sizing: border-box;
   height: 574.9px;
-  width: 405px;
-  min-width: 405px;
+  width: 414px;
+  min-width: 414px;
   overflow: hidden;
   display: flex;
   flex-direction: row;
@@ -78,15 +78,15 @@ const selectFrame = () => {
     opacity 0.3s ease;
 }
 .card-content {
-  align-self: stretch;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
   gap: 10px;
   .card-image {
-    width: 237px;
+    width: 500px;
+    margin-left: -20px;
     position: relative;
     object-fit: cover;
   }
@@ -102,6 +102,7 @@ const selectFrame = () => {
       letter-spacing: -0.02em;
       line-height: 1.1em;
       margin-top: 20px;
+      text-align: center;
     }
     .description-selected {
       align-self: stretch;
@@ -110,6 +111,7 @@ const selectFrame = () => {
       line-height: 1.1em;
       letter-spacing: 0.45px;
       color: #c7d4cf;
+      text-align: center;
     }
     .description {
       align-self: stretch;
@@ -118,6 +120,7 @@ const selectFrame = () => {
       line-height: 1.1em;
       letter-spacing: 0.45px;
       color: #c7d4cf;
+      text-align: center;
     }
   }
 }
@@ -179,7 +182,9 @@ const selectFrame = () => {
     padding: 0;
     width: 100%;
     .card-image {
-      width: 142px;
+      width: 300px;
+      margin-left: -10px;
+      margin-bottom: -30px;
       position: relative;
       object-fit: cover;
     }

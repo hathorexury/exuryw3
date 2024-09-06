@@ -27,7 +27,7 @@ const goHome = () => {
     <div class="d-flex align-center flex-column">
       <img src="/image5.png"  alt="Coming Soon" height="197" width="192"/>
       <h3 class="text-center text-primary mt-4">Proximamente!</h3>
-      <p class="text-center w-75">{{appStore.getActivePage}} - Lorem ipsum dolor sit amet consectetur. A sit fringilla molestie neque consectetur elementum scelerisque elementum turpis.</p>
+      <p class="text-center w-75">{{appStore.getActivePage}} -  The page you are looking for might it's been developing.</p>
       <div class="buttons-group ga-4 d-flex flex-column mt-8">
         <v-btn color="primary"  rounded @click="goHome()">Volver al home</v-btn>
         <v-btn color="primary" variant="text">Saber más</v-btn>
