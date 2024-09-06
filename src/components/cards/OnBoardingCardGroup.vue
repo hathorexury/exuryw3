@@ -14,24 +14,24 @@ const frames = ref([
   {
     title: "1. Protege Tu Cuenta: Regístrate y Verifícate",
     description: "Regístrate en 5 minutos y completa tu verificación KYC.",
-    image: "/image5.png",
+    image: "src/assets/how-it-works/Howitworksecury_white-01.svg",
   },
   {
     title: "2. Negocia en Persona: \n" +
       "Define tu operación",
-    description:
-"Tras verificarte, serás dirigido a nuestro WhatsApp corporativo para definir los detalles de tu operación.",   image: "/image5.png",
+    description: "Tras verificarte, serás dirigido a nuestro WhatsApp corporativo para definir los detalles de tu operación.",
+    image: "src/assets/how-it-works/Howitworksecury_white-02.svg",
   },
   {
     title: "3. Envía con Confianza: \nTransferencia Segura de Fondos",
-    description:
-"Transfiere tus fondos sin preocupaciones. Ya sea en criptomonedas o euros, el proceso es seguro y rápido.",    image: "/image5.png",
+    description: "Transfiere tus fondos sin preocupaciones. Ya sea en criptomonedas o euros, el proceso es seguro y rápido.",
+    image: "src/assets/how-it-works/Howitworksecury_white-03.svg",
   },
   {
     title: "4. Recibe con Tranquilidad: \n" +
       "Confirmación y Envío Final",
-    description:
-"Indica tu wallet para cripto o cuenta bancaria para euros. EXURY finalizara tu transacción de forma rápida y sencilla.",    image: "/image5.png",
+    description: "Indica tu wallet para cripto o cuenta bancaria para euros. EXURY finalizara tu transacción de forma rápida y sencilla.",
+    image: "src/assets/how-it-works/Howitworksecury_white-04.svg",
   },
 ]);
 
@@ -118,15 +118,16 @@ const mouseLeaveCardGroup = () => {
 };
 
 onMounted(() => {
-  if (window.innerWidth < 500) {
-    isMobile.value = true;
-    if (isMobile.value) {
-      cardWrapper.value = document.querySelector(".cards-transition-group");
-      if (cardWrapper.value) {
-        cardWrapper.value.addEventListener("touchstart", handleTouchStart);
-        cardWrapper.value.addEventListener("touchmove", handleTouchMove);
-        cardWrapper.value.addEventListener("touchend", handleTouchEnd);
-      }
+  // if (window.innerWidth < 500) {
+  //
+  // }
+  isMobile.value = true;
+  if (isMobile.value) {
+    cardWrapper.value = document.querySelector(".cards-transition-group");
+    if (cardWrapper.value) {
+      cardWrapper.value.addEventListener("touchstart", handleTouchStart);
+      cardWrapper.value.addEventListener("touchmove", handleTouchMove);
+      cardWrapper.value.addEventListener("touchend", handleTouchEnd);
     }
   }
 });
@@ -211,7 +212,7 @@ onUnmounted(() => {
   .cards-transition-group {
     display: flex;
     flex-direction: row;
-    align-items: start;
+    align-items: center;
     justify-content: flex-start;
     gap: 8px;
     padding: 20px 30px 20px 0;

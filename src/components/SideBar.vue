@@ -163,7 +163,7 @@ const goToBuyCrypto = (): void => {
 .nav-item {
   margin-left: 18px;
   padding: 16px 24px 16px 16px;
-  width: calc(100% - 40px);
+  width: calc(100% - 36px);
   &:hover {
     background-color: rgba(255, 255, 255, 0.1);
   }
