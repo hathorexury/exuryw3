@@ -226,7 +226,10 @@
   }
 }
 .top-bar-wrapper.scrolling {
-  transform: translateY(-80px);
+  padding: 20px 16px 10px 0;
+  background-color: rgba(10, 17, 14, 0.86);
+  backdrop-filter: blur(4px);
+  transform: translateY(0);
 }
 #logoExury.scrolling {
   top: 26px;
@@ -463,12 +466,10 @@ onMounted(() => {
     const listInnerElement = document.querySelector(".listInner");
     console.log(listInnerElement);
     if (listInnerElement) {
-      console.log("scrolling");
       listInnerElement.addEventListener("scroll", () => {
         const topBarWrapper = document.querySelector(".top-bar-wrapper");
         const logoExury = document.querySelector("#logoExury");
         if (topBarWrapper && logoExury) {
-          console.log("scrolling");
           if (listInnerElement.scrollTop > 10) {
             topBarWrapper.classList.add("scrolling");
             logoExury.classList.add("scrolling");
@@ -481,5 +482,5 @@ onMounted(() => {
     }
   }, 1000);
 
-})
+});
 </script>
