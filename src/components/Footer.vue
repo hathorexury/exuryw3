@@ -7,7 +7,7 @@
         <img
           class="logo-footer"
           alt=""
-          src="/LogoExury1.png"
+          src="/Icon.svg"
         />
         <p>Calle Hermosilla 48, 1. dcha.
           Madrid, Spain</p>
@@ -64,7 +64,7 @@
         </svg></p>
       </div>
       <div>
-        <p>© 2024 Exury. All rights reserved</p>
+        <p>© 2024 DIVISY APP SL. All rights reserved</p>
       </div>
     </div>
   </div>

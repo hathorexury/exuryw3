@@ -42,7 +42,7 @@ import CoinGroupModel from "@/components/coin/CoinGroupModel.vue";
           alt=""
           src="/EN_Funded_by_European_Union_vert_RGB_NEG.png"
         />
-        <img class="sponsor-right" alt="" src="/banco-de-espana-white.png" />
+        <img class="sponsor-right" alt="" src="/Icon.svg" />
       </div>
     </div>
   </div>

@@ -57,7 +57,7 @@
         <img
           id="logoExury"
           alt=""
-          src="/LogoExury1.png"
+          src="/Icon.svg"
         />
       </div>
     </v-main>
