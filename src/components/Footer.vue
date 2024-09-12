@@ -8,10 +8,11 @@
           class="logo-footer"
           alt=""
           src="/Icon.svg"
+          style="opacity: 0.01"
         />
         <p>Calle Hermosilla 48, 1. dcha.
           Madrid, Spain</p>
-        <p>contact@exury.io</p>
+        <p>soporte@divisy.co</p>
       </div>
       <div>
         <h2>Seguridad & Legal</h2>

@@ -58,6 +58,7 @@
           id="logoExury"
           alt=""
           src="/Icon.svg"
+          style="opacity: 0.01"
         />
       </div>
     </v-main>
